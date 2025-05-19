@@ -1,0 +1,45 @@
+[build-system]
+requires = ["hatchling >= 1.26"]
+build-backend = "hatchling.build"
+
+[project]
+name = "numpy-hilbert-curve"
+version = "1.0.1"
+authors =[
+{name = "Ryan P. Adams", email = "rpa@princeton.edu"}
+]
+description = "Implements Hilbert space-filling curves for Python with numpy"
+readme = {file = "README.md", content-type="text/markdown"}
+requires-python = ">=3.11"
+dependencies = [
+    "matplotlib>=3.10.3",
+    "numpy>=2.2.6",
+]
+license = {text = "MIT"}
+classifiers=[
+    'Development Status :: 4 - Beta',
+    'Intended Audience :: Science/Research',
+    'License :: OSI Approved :: MIT License',
+]
+
+[project.urls]
+homepage='https://github.com/PrincetonLIPS/numpy-hilbert-curve'
+repository="https://github.com/PrincetonLIPS/numpy-hilbert-curve"
+
+[dependency-groups]
+dev = [
+    "mypy>=1.15.0",
+    "ruff>=0.11.10",
+]
+examples =[
+    "matplotlib>=3.10.3",
+]
+tests = [
+    "codecov>=2.1.13",
+    "coverage>=7.8.0",
+    "nox>=2025.5.1",
+    "pytest>=8.3.5",
+    "pytest-xdist>=3.6.1",
+]
+[tool.hatch.build.targets.wheel]
+packages = ["src/hilbert"]
