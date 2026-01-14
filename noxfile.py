@@ -2,7 +2,7 @@ from pathlib import Path
 
 import nox
 
-PACKAGE = "revseq"
+PACKAGE = "numpy-hilbert-curve"
 PYTHON_VERSIONS = ["3.10", "3.11", "3.12", "3.13"]
 LATEST_VERSION = PYTHON_VERSIONS[-1]
 nox.needs_version = ">=2025.5.1"
